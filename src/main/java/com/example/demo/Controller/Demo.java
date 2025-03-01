@@ -30,6 +30,7 @@ public class Demo {
 
     @PostMapping("/entity")
     public Entity addEntity(@RequestBody Entity entity) {
+        System.out.println("POST: " + entity);
         data.put(entity.getId(), entity);
         return entity;
     }
@@ -42,6 +43,7 @@ public class Demo {
 
     @PutMapping("/entity/{id}")
     public Entity updateEntity(@PathVariable long id, @RequestBody Entity entity) {
+        System.out.println(entity);
         data.put(id, entity);
         return entity;
     }

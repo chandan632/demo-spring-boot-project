@@ -8,6 +8,11 @@ public class Entity
 
     private String description;
 
+    @Override
+    public String toString() {
+        return "Entity{id=" + this.id + ", title='" + this.title + "', description='" + this.description + "'}";
+    }
+
     public long getId() {
         return id;
     }
